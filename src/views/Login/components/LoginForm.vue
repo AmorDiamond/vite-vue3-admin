@@ -100,7 +100,6 @@ const schema = reactive<FormSchema[]>([
                   <img
                     v-if={picPath}
                     class="w-full h-full"
-                    {/* v-bind:src={picPath} */}
                     src={picPath.value}
                     alt="请输入验证码"
                   />

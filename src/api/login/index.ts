@@ -37,7 +37,7 @@ export const getTestRoleApi = (params: RoleParams): Promise<IResponse<string[]>>
 }
 
 // @Summary 获取验证码
-export const captcha = (data: { username: 'string'; password: 'string' }) => {
+export const captcha = (data: { username?: string; password?: string }) => {
   return request.post({
     url: '/base/captcha',
     data: data

@@ -728,6 +728,19 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
         meta: {
           title: t('router.sysApiList')
         }
+      },
+      {
+        path: 'list/:id',
+        component: () => import('@/views/Api/Detail/Index.vue'),
+        name: 'SysApiDetail',
+        meta: {
+          title: t('router.sysApiDetail'),
+          noTagsView: true,
+          noCache: true,
+          hidden: true,
+          canTo: true,
+          activeMenu: '/sysApi/list'
+        }
       }
     ]
   }

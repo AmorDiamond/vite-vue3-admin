@@ -184,7 +184,8 @@ export default {
     customer: '客户管理',
     customerList: '客户管理列表',
     sysApi: '系统api管理',
-    sysApiList: 'api管理列表'
+    sysApiList: 'api管理列表',
+    sysApiDetail: 'api详情'
   },
   permission: {
     hasPermission: '请设置操作权限值'
