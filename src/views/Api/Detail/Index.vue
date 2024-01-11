@@ -3,6 +3,7 @@ import { BaseButton } from '@/components/Button'
 import { onMounted, ref } from 'vue'
 import { ElCard, ElButton } from 'element-plus'
 import { Description, IColumn } from '../components/Description/Index'
+import { Counter } from '../components/Counter/Index'
 const count = ref(0)
 onMounted(() => {
   console.log('onMounted')
@@ -55,5 +56,6 @@ const descColumns: IColumn[] = [
       :border="true"
       :column="3"
     />
+    <Counter />
   </ElCard>
 </template>

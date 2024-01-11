@@ -3,6 +3,7 @@ import { ElDescriptions, ElDescriptionsItem } from 'element-plus'
 // import { descriptionProps } from 'element-plus'
 import { IColumn } from './Index'
 import { PropType, defineComponent } from 'vue'
+import { ref } from 'vue'
 // const descProps = defineProps(descriptionProps)
 export default defineComponent({
   extends: ElDescriptions,
@@ -20,7 +21,7 @@ export default defineComponent({
     }
   },
   setup(props) {
-    console.log(12, props)
+    console.log(12 + 'desc setup', props, this)
     return () => {
       return (
         <div>
@@ -32,6 +33,20 @@ export default defineComponent({
           </ElDescriptions>
         </div>
       )
+    }
+  },
+  data() {
+    const count = ref(0)
+    return {
+      count
+    }
+  },
+  mounted() {
+    console.log(123 + 'mounted', this.columns)
+  },
+  methods: {
+    handleClick() {
+      this.count++
     }
   }
 })
